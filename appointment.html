@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,31 +50,34 @@
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-      <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-              <div class="logo-container">
-                  <img src="/images/logo-white.png" alt="Ayurveda Clinic Logo" class="logo-white">
-                  <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo" class="logo-green">
-              </div>
-              <span class="brand-name">Ayurveda Clinic</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
-                  <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-              </ul>
-              <!-- <a class="btn btn-brand ms-lg-3" href="appointment.html">Book Appointment</a> -->
-          </div>
-      </div>
-  </nav>
+<!-- NEW: Legacy Shrinking Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <!-- Logo & Brand Name -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <div class="logo-container">
+                <img src="/images/logo-white.png" alt="Swastham Ayurveda Logo" class="logo-initial">
+                <img src="/images/logo-green.png" alt="Swastham Ayurveda Logo" class="logo-scrolled">
+            </div>
+            <span class="brand-name">Swastham Ayurveda</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
+                <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+                <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <a class="btn btn-brand ms-lg-3" href="appointment.html">Book Appointment</a>
+        </div>
+    </div>
+</nav>
 
   <!-- Page Header -->
   <section class="page-header" >
@@ -237,244 +240,4 @@
     });
   </script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- =======================================================
-# FAVICONS & META TAGS
-======================================================== -->
-
-<!-- Favicon Links (Matching Your Generated Files) -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#ffffff">
-
-<!-- Essential Meta Tags -->
-<meta name="description" content="Experience authentic Ayurvedic healing at Swastham Ayurveda in Calicut. We offer personalized treatments, Panchakarma, online consultations, and wellness packages to restore your natural balance.">
-<meta name="keywords" content="Ayurveda, Ayurvedic Clinic, Calicut, Kozhikode, Panchakarma, Ayurvedic Treatment, Holistic Healing, Swastham Ayurveda">
-<meta name="author" content="Swastham Ayurveda">
-
-<!-- Open Graph / Facebook / WhatsApp Meta Tags -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.swasthamayurveda.com/">
-<meta property="og:title" content="Swastham Ayurveda - Authentic Healing in Calicut">
-<meta property="og:description" content="Experience authentic Ayurvedic healing at Swastham Ayurveda. We offer personalized treatments, Panchakarma, online consultations, and wellness packages.">
-<meta property="og:image" content="https://www.swasthamayurveda.com/images/social-preview.jpg">
-<meta property="og:site_name" content="Swastham Ayurveda">
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://www.swasthamayurveda.com/">
-<meta name="twitter:title" content="Swastham Ayurveda - Authentic Healing in Calicut">
-<meta name="twitter:description" content="Experience authentic Ayurvedic healing at Swastham Ayurveda. We offer personalized treatments, Panchakarma, online consultations, and wellness packages.">
-<meta name="twitter:image" content="https://www.swasthamayurveda.com/images/social-preview.jpg">
-  <title>Book an Appointment | Swastham Ayurveda</title>
-  
-  <!-- CSS LIBRARIES -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-  <!-- LINK TO STYLESHEET -->
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-      <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-              <div class="logo-container">
-                  <img src="/images/logo-white.png" alt="Ayurveda Clinic Logo" class="logo-white">
-                  <img src="/images/logo-green.png" alt="Ayurveda Clinic Logo" class="logo-green">
-              </div>
-              <span class="brand-name">Ayurveda Clinic</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
-                  <li class="nav-item"><a class="nav-link" href="onlineconsultation.html">Consultation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-              </ul>
-              <!-- <a class="btn btn-brand ms-lg-3" href="appointment.html">Book Appointment</a> -->
-          </div>
-      </div>
-  </nav>
-
-  <!-- Page Header -->
-  <section class="page-header" >
-      <div class="container">
-          <div class="row">
-              <div class="col-12 text-center">
-                  <h1 class="page-title" data-aos="fade-down">Book Your Consultation</h1>
-                  <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Take the first step towards your well-being. We are here to help.</p>
-              </div>
-          </div>
-  </section>
-
-  <!-- Main Appointment Section -->
-  <section class="appointment-embed-section mandala-background">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center" data-aos="fade-up">
-          <h2 class="section-title">Schedule Your Visit</h2>
-          <p class="section-subtitle">Choose a time that works for you. We look forward to speaking with you.</p>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-10 col-xl-8" data-aos="fade-up" data-aos-delay="100">
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget-container">
-                <div class="calendly-inline-widget" data-url="https://calendly.com/motionvix1/30min" style="min-width:320px;height:700px;"></div>
-            </div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust Section -->
-  <section class="trust-section py-5">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="pillar-icon"><i class="fas fa-user-shield"></i></div>
-          <h5 class="mt-3">100% Confidential</h5>
-          <p>Your privacy is our priority. All consultations and records are kept strictly confidential.</p>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="pillar-icon"><i class="fas fa-user-md"></i></div>
-          <h5 class="mt-3">Expert Vaidyas</h5>
-          <p>You will be consulted by our team of highly experienced and compassionate Ayurvedic physicians.</p>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="pillar-icon"><i class="fas fa-hand-holding-heart"></i></div>
-          <h5 class="mt-3">Personalized Care</h5>
-          <p>We listen carefully to provide a treatment plan that is tailored specifically to you and your needs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-
-<!-- 1. Pre-Footer Call to Action Section -->
-<!-- <section class="cta-footer">
-    <div class="container text-center">
-        <h2 class="cta-title">Ready to Begin Your Healing Journey?</h2>
-        <p class="cta-text">Book your consultation today and take the first step towards a healthier, more balanced you.</p>
-        <a href="appointment.html" class="btn btn-primary-hero">Book an Appointment</a>
-    </div>
-</section> -->
-
-<!-- 2. Main Footer -->
-<footer class="footer">
-    <!-- Curved Top Shape -->
-    <div class="footer-wave">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path d="M1440,21.2101911 C1200,9.40339433 960,3.59660567 720,3.59660567 C480,3.59660567 240,9.40339433 0,21.2101911 L0,120 L1440,120 L1440,21.2101911 Z"></path>
-        </svg>
-    </div>
-
-    <div class="container">
-        <div class="row g-5">
-
-            <!-- Column 1: Brand Info -->
-            <div class="col-lg-4">
-                <a class="footer-brand" href="index.html">
-                    <img src="/images/logo-white.jpeg" alt="Ayurveda Clinic Logo">
-                    <!-- <span>Swastham Ayurveda</span> -->
-                </a>
-                <p class="footer-mission">Your trusted partner in holistic health and wellness, providing authentic Ayurvedic treatments in Calicut.</p>
-                <div class="social-icons-footer">
-                    <a href="https://www.facebook.com/swasthamayu/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/swastham.ayurveda/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <!-- <a href="#" aria-label="Email"><i class="fas bi-envelope"></i></a> -->
-                </div>
-            </div>
-
-            <!-- Column 2: Quick Links -->
-            <div class="col-lg-2 col-md-4">
-                <h5>Explore</h5>
-                <ul class="list-unstyled">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="treatment.html">Treatments</a></li>
-                    <li><a href="appointment.html">Appointment</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 3: Contact Info -->
-            <div class="col-lg-3 col-md-4">
-                <h5>Get in Touch</h5>
-                <ul class="list-unstyled">
-                    <li><a href="https://maps.google.com/?q=123+Clinic+Road,Calicut,Kerala" target="_blank"><i class="fas fa-map-marker-alt"></i>123 Clinic Road, Calicut</a></li>
-                    <li><a href="tel:0495-2766717"><i class="fas fa-phone"></i>0495-2766717</a></li>
-                    <li><a href="mailto:info@tatvaayurved.com"><i class="fas fa-envelope"></i>info@ayurved.com</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Timings -->
-            <div class="col-lg-3 col-md-4">
-                <h5>Clinic Hours</h5>
-                <ul class="list-unstyled">
-                    <li>Mon - Sat: 9am - 6pm</li>
-                    <li>Sunday: Closed</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- 3. Sub-Footer (Copyright Bar) -->
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>© 2025 Ayurveda Clinic. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p>Designed with <i class="fas fa-heart" style="color:#DDB95A;"></i> by Fariz Motionvix</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    // Initialize AOS
-    AOS.init({
-        duration: 800,
-        once: true,
-    });
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  </script>
-</body>
->>>>>>> 634218a499f634d1d3d00f824f6743bc736699bf
 </html>
