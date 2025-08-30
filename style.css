@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     /* --- General Styles --- */
     /* In style.css */
 body {
@@ -1635,3 +1636,1642 @@ Mandala Art Background Effect
         transform: rotate(360deg);
     }
 }
+=======
+    /* --- General Styles --- */
+    /* In style.css */
+body {
+    font-family: 'Lato', sans-serif; /* Clean body font */
+    background-color: #F5F0E8;       /* Warm off-white background */
+    color: #3D3D3D;                 /* Dark warm grey text */
+    font-size: 17px;                 /* A slightly larger, more readable base size */
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand span {
+    font-family: 'Lora', serif;      /* Elegant serif for headings */
+}
+
+/* Update section titles to use the new font */
+.section-title {
+  color: #5D4037; /* Deep earthy brown */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.section-subtitle {
+    color: #A15B3A; /* Terracotta color */
+    margin-top: -15px;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* ---
+NEW: Legacy Shrinking Navbar
+--- */
+
+.navbar {
+    padding: 20px 0; /* Starts larger */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), transparent);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth transition */
+}
+.navbar.scrolled {
+    padding: 10px 0; /* Shrinks */
+    background-color: #F5F0E8;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+/* Logo & Brand Name Styling */
+.navbar-brand {
+    gap: 12px;
+    font-size: 1.7rem;
+    color: #ffffff; /* Starts white */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    transition: color 0.4s ease;
+}
+.navbar.scrolled .navbar-brand {
+    color: #3D3D3D; /* Becomes dark grey on scroll */
+    text-shadow: none;
+}
+.logo-container {
+    height: 55px; /* Starts larger */
+    transition: height 0.4s ease;
+}
+.navbar.scrolled .logo-container {
+    height: 50px; /* Shrinks */
+}
+.logo-container img { height: 100%; width: auto; }
+.logo-scrolled { display: none; } /* Scrolled logo (green) is hidden initially */
+.navbar.scrolled .logo-initial { display: none; } /* Initial logo (white) is hidden on scroll */
+.navbar.scrolled .logo-scrolled { display: block; }
+
+/* Nav Link Styling */
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0 15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    transition: color 0.4s ease;
+}
+.navbar.scrolled .navbar-nav .nav-link {
+    color: #3D3D3D;
+    text-shadow: none;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: #ffffff; /* No underline, just ensure it stays bright on hover */
+}
+.navbar.scrolled .navbar-nav .nav-link:hover, .navbar.scrolled .navbar-nav .nav-link.active {
+    color: #A15B3A; /* Terracotta color on hover when scrolled */
+}
+
+/* Brand Button Styling */
+.btn-brand {
+    background-color: #ffffff;
+    color: #3D3D3D;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+.navbar.scrolled .btn-brand {
+    background-color: #A15B3A;
+    color: #ffffff;
+    border-color: #A15B3A;
+}
+.btn-brand:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+.navbar.scrolled .btn-brand:hover {
+    background-color: #5D4037;
+    border-color: #5D4037;
+}
+
+/* Mobile Adjustments (Always in "scrolled" state) */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 15px 0;
+        background: #F5F0E8;
+    }
+    .navbar-brand { color: #3D3D3D; text-shadow: none; }
+    .logo-container { height: 50px; }
+    .logo-initial { display: none; }
+    .logo-scrolled { display: block; }
+    .navbar-nav .nav-link { color: #3D3D3D; text-shadow: none; margin: 10px 0; text-align: center; }
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: #A15B3A; }
+    .btn-brand {
+        background-color: #A15B3A;
+        color: #ffffff;
+        border-color: #A15B3A;
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+/* ---
+NEW: Minimal & Earthy Hero Section
+--- */
+.hero-section {
+    position: relative;
+    padding: 180px 0;
+    z-index: 1;
+    background-image: url('/images/hero-bg.jpg'); /* A subtle, earthy food background */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 240, 232, 0.75); /* Your new background color with overlay */
+    z-index: -1;
+}
+.hero-headline {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #5D4037;
+    margin-bottom: 20px;
+}
+.hero-subtext {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #3D3D3D;
+    margin: 0 auto 40px auto;
+    max-width: 800px;
+}
+.hero-buttons { display: flex; gap: 15px; justify-content: center; }
+.btn-primary-hero {
+    background-color: #A15B3A;
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.btn-primary-hero:hover {
+    background-color: #5D4037;
+    transform: translateY(-3px);
+}
+.btn-secondary-hero {
+    background-color: transparent;
+    color: #A15B3A;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid #A15B3A;
+    transition: all 0.3s ease;
+}
+.btn-secondary-hero:hover {
+    background-color: #A15B3A;
+    color: #ffffff;
+}
+@media (max-width: 991.98px) {
+    .hero-section { padding: 120px 0; }
+    .hero-headline { font-size: 2.8rem; }
+}
+    
+    /* --- Modern About Section (REVISED) --- */
+/* .about-section {
+    background-color: #F7F6F1; 
+
+/* Image Composition */
+/* .about-image-composition {
+    position: relative;
+    min-height: 450px; 
+.about-image-composition .img-main {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+}
+.about-image-composition .img-secondary {
+    width: 55%;
+    height: auto;
+    border-radius: 15px;
+    border: 6px solid #ffffff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+} */
+
+/* Feature List 
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+.feature-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+.feature-icon {
+    flex-shrink: 0; 
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #EAF0E9; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+.feature-content h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #4A4A4A;
+    margin-bottom: 5px;
+}
+.feature-content p {
+    color: #6c757d;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.btn-outline-brand {
+    color: #365C32;
+    border-color: #365C32;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-weight: 600;
+}
+.btn-outline-brand:hover {
+    background-color: #365C32;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .about-image-composition {
+        margin-bottom: 40px;
+        min-height: 350px; /* Adjust height for smaller screens */
+    }
+    .about-image-composition .img-main {
+        width: 100%;
+    }
+    .about-image-composition .img-secondary {
+        width: 60%;
+        bottom: -20px; /* Adjust overlap */
+        right: -10px;
+    }
+}
+
+/* ---
+NEW: Content-First About Section
+--- */
+.about-section {
+    position: relative;
+    z-index: 1;
+    background-image: url('/images/aboutus-bg.jpg'); /* Subtle texture/spa background */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 240, 232, 0.9); /* Your background color with 90% opacity */
+    z-index: -1;
+}
+.about-section .lead {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+/* ---
+NEW: Minimal "Pillars of Our Practice" Section
+--- */
+
+.pillars-section {
+    background-color: #F5F0E8; /* Your new warm off-white background */
+}
+
+/* The new minimalist card style */
+.pillar-card {
+    padding: 35px;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: 1px solid #EBE4D9;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    border-color: #A15B3A;
+}
+
+.pillar-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #A15B3A; /* Terracotta icon color */
+}
+
+.pillar-card h5 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #3D3D3D;
+    margin-bottom: 10px;
+}
+
+.pillar-card p {
+    color: #5D4037;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.btn-pillar-link {
+    color: #A15B3A;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+.btn-pillar-link:hover {
+    color: #5D4037;
+}
+
+/* The elegant divider */
+.section-divider {
+    text-align: center;
+    margin: 80px 0;
+    color: #D3C6B1; /* A very soft, muted brown */
+    font-size: 1.5rem;
+}
+
+
+
+/* ---
+NEW: Elegant Filmstrip Treatment Carousel
+--- */
+
+#treatment-carousel-section {
+    position: relative;
+    padding: 80px 0;
+    background-color: #F5F0E8;
+    overflow: hidden;
+}
+/* ADD THESE TWO NEW RULES TO YOUR TREATMENT CAROUSEAL CSS */
+
+#treatment-carousel-section .section-title {
+    color: #5D4037; /* The deep, earthy brown */
+}
+
+#treatment-carousel-section .section-subtitle {
+    color: #A15B3A; /* The rich, muted terracotta */
+}
+
+/* Container for the animated leaves */
+.animated-leaves-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Puts it behind the content */
+}
+
+/* Base style for a single leaf */
+.leaf {
+    position: absolute;
+    width: 50px; /* Base size */
+    height: 50px; /* Base size */
+    background-image: url('/images/leaf.png'); /* A generic transparent leaf PNG */
+    background-image: url('/images/leaf-3.png'); /* A generic transparent leaf PNG */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9; /* Subtle look */
+    filter: blur(.5px); /* Soften the edges */
+    animation: leafFloat 20s linear infinite;
+}
+
+/* Individual leaf variations for a natural look */
+.leaf-1 {
+    width: 80px; height: 80px;
+    left: 10%;
+    animation-duration: 25s;
+    animation-delay: 0s;
+}
+.leaf-2 {
+    width: 40px; height: 40px;
+    left: 30%;
+    animation-duration: 18s;
+    animation-delay: 5s;
+    opacity: 0.5;
+}
+.leaf-3 {
+    width: 100px; height: 100px;
+    left: 50%;
+    animation-duration: 22s;
+    animation-delay: 8s;
+    opacity: 0.2;
+}
+.leaf-4 {
+    width: 60px; height: 60px;
+    left: 75%;
+    animation-duration: 20s;
+    animation-delay: 3s;
+}
+.leaf-5 {
+    width: 90px; height: 90px;
+    left: 90%;
+    animation-duration: 28s;
+    animation-delay: 12s;
+}
+
+/* Keyframes for the floating animation */
+@keyframes leafFloat { 
+    0% {
+        bottom: -150px;
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(20px) rotate(180deg);
+    }
+    100% {
+        bottom: 100%;
+        transform: translateX(-20px) rotate(360deg);
+    }
+}
+
+#treatment-carousel-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* REVISED Swiper container styling */
+.treatment-swiper {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+/* REVISED individual slide styling - REMOVED coverflow styles */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px; /* For shadow */
+    transition: opacity 0.4s ease;
+}
+/* Optional: Slightly fade out non-active slides for focus */
+.swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.6;
+}
+
+
+/* Card styling remains mostly the same, but we adjust the hover for the new layout */
+.treatment-card-carousel {
+    background-color: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px; /* Give cards a consistent width */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EBE4D9;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+}
+.treatment-card-carousel:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.treatment-card-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 30px auto 20px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.treatment-card-carousel h5 {
+    font-family: 'Lora', serif;
+    color: #3D3D3D;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.treatment-card-carousel p {
+    flex-grow: 1;
+    margin: 0 25px 25px 25px;
+    color: #5D4037;
+    font-size: 1rem;
+}
+.btn-card {
+    background-color: #A15B3A;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 1px solid transparent;
+    margin: 0 25px 30px 25px;
+}
+.btn-card:hover {
+    background-color: #5D4037;
+    color: #ffffff;
+}
+
+/* REVISED Swiper Controls Styling */
+.swiper-pagination-bullet {
+    background-color: #5D4037;
+    opacity: 0.3;
+    width: 10px;
+    height: 10px;
+}
+.swiper-pagination-bullet-active {
+    background-color: #A15B3A;
+    opacity: 1;
+}
+
+.treatment-swiper .swiper-button-next,
+.treatment-swiper .swiper-button-prev {
+    color: #5D4037;
+    transition: color 0.3s ease;
+}
+.treatment-swiper .swiper-button-next:hover,
+.treatment-swiper .swiper-button-prev:hover {
+    color: #A15B3A;
+}
+/* ---
+NEW: Earthy & Minimal Testimonials Section
+--- */
+
+.testimonial-section {
+    background-color: #F5F0E8; /* NEW: Warm off-white background */
+    padding: 80px 0;
+}
+
+.testimonial-swiper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* The giant quote mark */
+.testimonial-icon {
+    font-family: 'Lora', serif; /* Use serif font for a classic feel */
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #A15B3A; /* NEW: Terracotta color */
+    opacity: 0.25;   /* Soften the quote mark */
+}
+
+.testimonial-body {
+    padding-top: 1.5rem;
+}
+
+/* The actual testimonial text */
+.testimonial-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem; /* Slightly larger for impact */
+    font-weight: 400;
+    line-height: 1.7;
+    color: #3D3D3D; /* NEW: Dark warm grey */
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* The author's name */
+.testimonial-author {
+    font-family: 'Lora', serif; /* NEW: Serif font */
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #5D4037; /* NEW: Earthy brown */
+    text-align: right;
+}
+
+/* REVISED Swiper Controls Styling */
+.testimonial-pagination {
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+}
+.testimonial-pagination .swiper-pagination-bullet {
+    background-color: #5D4037;
+    opacity: 0.3;
+    width: 10px;
+    height: 10px;
+}
+.testimonial-pagination .swiper-pagination-bullet-active {
+    background-color: #A15B3A;
+    opacity: 1;
+}
+
+.testimonial-swiper .swiper-button-next,
+.testimonial-swiper .swiper-button-prev {
+    color: #5D4037;
+    font-weight: 900;
+}
+.testimonial-swiper .swiper-button-next:hover,
+.testimonial-swiper .swiper-button-prev:hover {
+    color: #A15B3A;
+}
+    
+    /* --- Glowing Spotlight Team Section (REVISED) --- */
+/* ---
+NEW: Earthy Team Section
+--- */
+.team-section {
+    background-color: #F5F0E8; /* Deep earthy brown */
+}
+.team-section .section-title { color: #5D4037; }
+.team-section .section-subtitle { color: #A15B3A; }
+.team-card {
+    background-color: #F5F0E8; /* Warm off-white card */
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid #ddd;
+}
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.team-card-img { padding: 30px 30px 0 30px; }
+.team-card-img img { width: 100%; border-radius: 15px; object-fit: cover; }
+.team-card-body { padding: 25px 30px; }
+.team-title { color: #3D3D3D; font-weight: 700; }
+.team-specialty { color: #A15B3A; margin-bottom: 20px; font-weight: 600; }
+.team-social { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; }
+.team-social a { color: #3D3D3D; font-size: 1rem; transition: all 0.3s ease; }
+.team-social a:hover { color: #A15B3A; transform: scale(1.2); }
+.btn-team-book {
+    display: inline-block;
+    background-color: #A15B3A;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+.btn-team-book:hover {
+    background-color: #A15B3A;
+}
+    /* --- Footer Styles --- */
+/* ---
+NEW: Earthy CTA Footer
+--- */
+.cta-footer {
+    padding: 60px 0;
+    background-color: #F5F0E8; /* Terracotta background */
+}
+.cta-title {
+    color: #5D4037;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.cta-text {
+    color: #A15B3A;
+    font-size: 1.2rem;
+    margin: 15px 0 30px 0;
+}
+/* We also need to style the primary button for a white background */
+.cta-footer .btn-primary-hero {
+    background-color: #A15B3A;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.cta-footer .btn-primary-hero:hover {
+    background-color: transparent;
+    color: #A15B3A;
+}
+
+/* Main Footer Styling */
+.footer {
+    position: relative;
+    background-color: #5D4037; /* The deep, earthy brown */
+    color: rgba(255, 255, 255, 0.75); /* Soft, warm off-white text */
+    padding: 30px 0 0 0;
+}
+.footer-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+    fill: #5D4037; /* This MUST match the footer background */
+}
+
+/* Logo Styling */
+.footer-logo-link {
+    display: block;
+    margin-bottom: 20px;
+    max-width: 280px;
+}
+.footer-logo {
+    width: 100%;
+    height: auto;
+}
+
+.footer-mission {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Headings and Links */
+.footer h5 {
+    color: #DDB95A; /* CRITICAL FIX: Gold headings for elegance and contrast */
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Lora', serif;
+}
+.footer .list-unstyled a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.footer .list-unstyled a:hover {
+    color: #DDB95A; /* Gold on hover */
+    transform: translateX(5px);
+}
+.footer .list-unstyled a i {
+    color: #DDB95A; /* Gold icons */
+    width: 20px;
+}
+.footer-brand {
+    display: block; /* Makes the link a block element */
+    margin-bottom: 20px;
+    max-width: 280px; /* Controls the maximum size of your logo */
+    text-decoration: none; /* Ensure no underline on the link */
+}
+
+.footer-brand img {
+    width: 100%; /* Makes the image responsive within the container */
+    height: auto;
+}
+
+/* Social Icons */
+.social-icons-footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.social-icons-footer a:hover {
+    background-color: #DDB95A;
+    color: #5D4037; /* CRITICAL FIX: Dark brown text on hover */
+    transform: translateY(-3px);
+}
+
+/* Sub-Footer */
+.footer-bottom {
+    background-color: #3E2723; /* CRITICAL FIX: Even darker brown for a layered look */
+    padding: 10px 0;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer-bottom p { margin: 0; }
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #A15B3A; /* Terracotta button */
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    text-decoration: none;
+}
+.back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+}
+.back-to-top:hover { background: #DDB95A; }
+.back-to-top:hover i { color: #5D4037; } /* Dark brown icon on hover */
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Back to Top Button Styling */
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #5D4037;
+    width: 45px;
+    height: 46px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    text-decoration: none;
+}
+.back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+}
+.back-to-top:hover { background: #DDB95A; }
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+      /* --- WhatsApp Floating Button --- */
+    .whatsapp-float {
+        position: fixed;
+        width: 65px;
+        height: 65px;
+        bottom: 90px;
+        right: 15px;
+        background-color: #25D366; /* Official WhatsApp Green */
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        animation: pulse 2.5s infinite; /* The pulse animation */
+        text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        animation-play-state: paused; /* Pause animation on hover */
+        box-shadow: 4px 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-float .tooltip-text {
+        visibility: hidden;
+        opacity: 0;
+        width: 120px;
+        background-color: #365C32; /* Your site's main green */
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        right: 75px; /* Position to the left of the button */
+        font-size: 0.9rem;
+        transition: visibility 0.2s, opacity 0.2s ease-in-out;
+        white-space: nowrap; /* Keep text on one line */
+    }
+
+    .whatsapp-float:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Pulse Animation Keyframes */
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+    }
+
+
+/* ---
+Styles for About Us Page (Earthy Theme)
+--- */
+
+/* A slightly whiter background for contrast on certain sections */
+.bg-white {
+    background-color: #ffffff !important;
+}
+
+
+/* Updated Image Composition to match new theme */
+/* Philosophy Section Styling */
+.philosophy-section {
+    background-color: #F5F0E8; /* Corrected typo to F5F0E8 */
+}
+.philosophy-section .lead {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #5D4037;
+}
+.philosophy-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Pillars of Care Section Styling */
+.pillars-of-care {
+    background-color: #5D4037; /* Deep Earthy Brown */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.pillar-card-alt {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 35px;
+    border-radius: 15px;
+    height: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+.pillar-card-alt:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-8px);
+}
+.pillar-card-alt h5 {
+    color: #ffffff;
+    font-family: 'Lora', serif;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+.pillar-card-alt p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* This is the missing icon style from the old pillar card */
+.pillar-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #A15B3A; /* Terracotta icon color */
+}
+/* We need a version for the dark background */
+.pillar-card-alt .pillar-icon {
+    color: #DDB95A; /* Gold icon color on dark background */
+}
+
+
+/* Gallery Section Styling */
+.gallery-section {
+    background-color: #F5F0E8;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.gallery-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    height: 300px;
+    position: relative; /* For the overlay */
+}
+.gallery-item::before { /* Add a subtle overlay for elegance */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    z-index: 1;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Also, ensure the page-header styling from the previous page is available */
+.page-header {
+    position: relative;
+    padding: 150px 0;
+    z-index: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(93, 64, 55, 0.7); /* Dark Brown with 70% opacity */
+    z-index: -1;
+}
+.page-title {
+    font-family: 'Lora', serif;
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.page-subtitle {
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+/* end of about page */
+
+/* --- Styles for Treatments Page --- */
+
+/* ---
+Styles for NEW Treatments Page
+--- */
+
+.bg-light-brown {
+    background-color: #F5F0E8; /* Your warm off-white */
+}
+
+.treatment-item .section-title {
+    margin-bottom: 20px;
+}
+
+/*
+THIS WAS THE CRITICAL MISSING PIECE.
+This styles the artistic overlapping image container.
+*/
+.about-image-composition {
+    position: relative;
+    min-height: 450px;
+}
+.about-image-composition .img-main {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+}
+.about-image-composition .img-secondary {
+    width: 55%;
+    height: auto;
+    border-radius: 15px;
+    border: 6px solid #ffffff; /* Use a clean white border for a layered look */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+/* Responsive adjustments for the image composition */
+@media (max-width: 991.98px) {
+    .about-image-composition {
+        margin-bottom: 40px;
+        min-height: 350px;
+    }
+    .about-image-composition .img-main {
+        width: 100%;
+    }
+    .about-image-composition .img-secondary {
+        width: 60%;
+        bottom: -20px;
+        right: -10px;
+    }
+}
+
+
+/* Styling for the benefits list */
+.benefits-title {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #3D3D3D;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+.text-gold {
+    color: #DDB95A;
+}
+
+.benefits-list {
+    list-style: none;
+    padding-left: 0;
+}
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: #5D4037;
+    font-size: 1.1rem;
+}
+.benefits-list li i {
+    color: #A15B3A; /* Terracotta color for the checkmarks */
+    margin-top: 5px; /* Align icon with first line of text */
+}
+
+/* Ensure the specialty clinic section subtitle is styled correctly */
+.pillars-of-care .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+}
+/* end of treatment page */
+
+/* ---
+Styles for NEW Earthy Online Consultation Page
+--- */
+
+/* How It Works - Timeline Section */
+.process-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+}
+.process-timeline::after { /* The central timeline bar */
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #D3C6B1; /* Muted brown line */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+.process-step {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px;
+}
+.process-step:nth-child(odd) { left: 0; text-align: right; }
+.process-step:nth-child(even) { left: 50%; text-align: left; }
+.process-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: #A15B3A; /* Terracotta icon circle */
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    border: 4px solid #F5F0E8;
+}
+.process-step:nth-child(odd) .process-icon { right: -30px; }
+.process-step:nth-child(even) .process-icon { left: -30px; }
+.process-content h4 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #5D4037;
+}
+.process-content p {
+    color: #3D3D3D;
+    font-size: 1rem;
+}
+
+/* What We Treat Online Section */
+.info-card-alt {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #EBE4D9;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.info-card-alt:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    border-color: #A15B3A;
+}
+.info-card-icon {
+    font-size: 2.5rem;
+    color: #A15B3A;
+    margin-bottom: 15px;
+}
+.info-card-alt h5 {
+    font-family: 'Lora', serif;
+    color: #3D3D3D;
+    font-weight: 700;
+}
+
+/* REVISED FAQ Section */
+.faq-section {
+    background-color: #F5F0E8;
+}
+.faq-section .accordion-item {
+    background-color: #ffffff;
+    border: 1px solid #EBE4D9;
+    border-radius: 10px !important;
+    margin-bottom: 15px;
+    box-shadow: none;
+}
+.faq-section .accordion-button {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #5D4037;
+    background-color: #ffffff;
+    border-radius: 10px !important;
+}
+.faq-section .accordion-button:not(.collapsed) {
+    background-color: #5D4037;
+    color: #ffffff;
+    box-shadow: none;
+}
+.faq-section .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(161, 91, 58, 0.25);
+}
+.faq-section .accordion-body {
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+.faq-section .accordion-button::after {
+    filter: grayscale(1) brightness(0.5); /* Mutes the default Bootstrap icon */
+}
+.faq-section .accordion-button:not(.collapsed)::after {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Responsive adjustments for the timeline */
+@media (max-width: 767.98px) {
+    .process-timeline::after { left: 30px; }
+    .process-step { width: 100%; padding-left: 80px; padding-right: 20px; text-align: left !important; }
+    .process-step:nth-child(even) { left: 0; }
+    .process-icon { left: 0; }
+    .process-step:nth-child(odd) .process-icon { right: auto; left: 0; }
+}
+
+/* "How It Works" Call-to-Action */
+.process-cta {
+    margin-top: 60px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #EBE4D9;
+}
+.process-cta .cta-title {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #5D4037;
+}
+.process-cta p {
+    color: #3D3D3D;
+    margin-bottom: 25px;
+}
+.process-cta .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows buttons to stack on small screens */
+}
+/* A special WhatsApp button style */
+.btn-whatsapp-alt {
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.btn-whatsapp-alt:hover {
+    background-color: #128C7E;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Informative paragraph style */
+.info-paragraph {
+    max-width: 700px;
+    color: #5D4037;
+    background-color: #F5F0E8; /* A slightly different background to make it stand out */
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #EBE4D9;
+    font-size: 0.95rem;
+}
+/* end of the page */
+
+/* ---
+Styles for NEW Earthy Appointment Page
+--- */
+
+.appointment-embed-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #F5F0E8; /* Your warm off-white */
+}
+
+/* A new container to add a beautiful border and shadow */
+.calendly-inline-widget-container {
+    border-radius: 15px;
+    overflow: hidden; /* This is crucial for the border-radius to apply */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border: 1px solid #EBE4D9;
+}
+
+/* Trust Section Styling */
+.trust-section {
+    background-color: #F5F0E8;
+}
+.trust-section h5 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #3D3D3D;
+}
+.trust-section p {
+    color: #5D4037;
+    font-size: 1rem;
+}
+
+
+/* ---
+Styles for NEW Earthy Contact Page
+--- */
+
+.contact-section {
+    background-color: #F5F0E8;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.contact-info-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #EBE4D9;
+    color: #A15B3A; /* Terracotta icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.contact-info-text h5 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #3D3D3D;
+    margin-bottom: 5px;
+}
+.contact-info-text p {
+    margin-bottom: 0;
+    color: #5D4037;
+    font-size: 1.1rem;
+}
+.contact-info-text a {
+    color: #5D4037;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.contact-info-text a:hover {
+    color: #A15B3A;
+}
+
+/* Contact Form Wrapper */
+.contact-form-wrapper {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    border: 1px solid #EBE4D9;
+}
+.form-title {
+    color: #5D4037;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+}
+
+/* We can reuse the floating label styles from the appointment page, so no new CSS is needed for the form fields themselves. */
+
+
+/* Map Section */
+.map-section {
+    position: relative;
+    padding: 40px 0;
+    background-color: #F5F0E8;
+}
+.map-container {
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #EBE4D9;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+/* ---
+Styles for NEW Earthy Packages Page
+--- */
+
+.packages-section {
+    background-color: #F5F0E8;
+}
+
+/* A new card style to match the earthy theme */
+.package-card-alt {
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #EBE4D9;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+}
+.package-card-alt:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-color: #A15B3A;
+}
+
+.package-card-alt .package-card-img {
+    height: 220px;
+    overflow: hidden;
+}
+.package-card-alt .package-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.package-card-alt:hover .package-card-img img {
+    transform: scale(1.1);
+}
+
+.package-card-alt .package-card-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.package-card-alt .package-title {
+    font-family: 'Lora', serif;
+    color: #3D3D3D;
+    font-weight: 700;
+}
+.package-card-alt .package-desc {
+    color: #5D4037;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.package-card-alt .btn-package {
+    background-color: transparent;
+    border: 1px solid #A15B3A;
+    color: #A15B3A;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.package-card-alt .btn-package:hover {
+    background-color: #A15B3A;
+    color: #ffffff;
+}
+
+/* REVISED Modal Styling */
+.modal-content {
+    border-radius: 15px;
+    border: 1px solid #EBE4D9;
+    background-color: #F5F0E8; /* Warm off-white modal */
+}
+.modal-header {
+    background-color: transparent;
+    border-bottom: 1px solid #EBE4D9;
+}
+.modal-header .btn-close {
+    /* Uses default Bootstrap styling which is fine */
+}
+.modal-title {
+    font-family: 'Lora', serif;
+    color: #5D4037; /* Earthy brown title */
+    font-weight: 700;
+}
+.modal-body p {
+    color: #3D3D3D;
+}
+.benefits-title-modal {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #3D3D3D;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.modal-benefits-list i {
+    color: #A15B3A; /* Terracotta icons */
+}
+.modal-body .btn-primary-hero {
+    background-color: #A15B3A;
+    color: #ffffff;
+}
+.modal-body .btn-primary-hero:hover {
+    background-color: #5D4037;
+}
+/* ---
+Mandala Art Background Effect
+--- */
+
+/* 1. The main container class for any section */
+.mandala-background {
+    position: relative; /* Essential for positioning the pseudo-element */
+    overflow: hidden;   /* Prevents the large mandala from creating scrollbars */
+}
+
+/* 2. The pseudo-element that holds and animates the mandala */
+.mandala-background::before {
+    content: '';
+    position: absolute;
+    z-index: 0; /* Sits behind the content */
+    
+    /* Position the mandala to peek from the top right */
+    top: -250px; 
+    right: -300px;
+
+    /* Set the size of the mandala */
+    width: 800px; 
+    height: 800px;
+
+    /* Your mandala image */
+    background-image: url('/images/mandala-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    /* Make it very faint */
+    opacity: 0.5;
+
+    /* The slow, calming rotation animation */
+    animation: slow-rotate 300s linear infinite;
+}
+
+/* 3. Ensure the actual content of the section sits on top of the mandala */
+.mandala-background .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* 4. The animation keyframes for the slow rotation */
+@keyframes slow-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+>>>>>>> 634218a499f634d1d3d00f824f6743bc736699bf
