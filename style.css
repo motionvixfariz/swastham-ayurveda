@@ -133,7 +133,7 @@ NEW: Minimal & Earthy Hero Section
     position: relative;
     padding: 180px 0;
     z-index: 1;
-    background-image: url('/images/hero-bg.png'); /* A subtle, earthy food background */
+    background-image: url('/images/hero-bg.png'); /* A subtle, earthy food background */ 
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -197,78 +197,7 @@ NEW: Minimal & Earthy Hero Section
     .hero-headline { font-size: 2.8rem; }
 }
     
-    /* --- Modern About Section (REVISED) --- */
-/* .about-section {
-    background-color: #F7F6F1; 
 
-/* Image Composition */
-/* .about-image-composition {
-    position: relative;
-    min-height: 450px; 
-.about-image-composition .img-main {
-    width: 80%;
-    height: auto;
-    border-radius: 15px;
-    position: relative;
-    z-index: 2;
-}
-.about-image-composition .img-secondary {
-    width: 55%;
-    height: auto;
-    border-radius: 15px;
-    border: 6px solid #ffffff;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 3;
-} */
-
-/* Feature List 
-.feature-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-}
-.feature-list-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 25px;
-}
-.feature-icon {
-    flex-shrink: 0; 
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #EAF0E9; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-}
-.feature-content h5 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #4A4A4A;
-    margin-bottom: 5px;
-}
-.feature-content p {
-    color: #6c757d;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-.btn-outline-brand {
-    color: #365C32;
-    border-color: #365C32;
-    border-radius: 50px;
-    padding: 10px 30px;
-    font-weight: 600;
-}
-.btn-outline-brand:hover {
-    background-color: #365C32;
-    color: white;
-}
 
 /* Responsive adjustments */
 @media (max-width: 991.98px) {
@@ -292,7 +221,7 @@ NEW: Content-First About Section
 .about-section {
     position: relative;
     z-index: 1;
-    background-image: url('/images/aboutus-bg.jpg'); /* Subtle texture/spa background */
+    background-image: url('/images/aboutus-bg.png'); /* Subtle texture/spa background */
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
