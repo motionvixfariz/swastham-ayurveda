@@ -2231,44 +2231,8 @@ NEW: Earthy & Minimal Testimonials Section
 /* ---
 NEW: Earthy Team Section
 --- */
-.team-section {
-    background-color: #F5F0E8; /* Deep earthy brown */
-}
-.team-section .section-title { color: #5D4037; }
-.team-section .section-subtitle { color: #A15B3A; }
-.team-card {
-    background-color: #F5F0E8; /* Warm off-white card */
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.4s ease;
-    border: 1px solid #ddd;
-}
-.team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-.team-card-img { padding: 30px 30px 0 30px; }
-.team-card-img img { width: 100%; border-radius: 15px; object-fit: cover; }
-.team-card-body { padding: 25px 30px; }
-.team-title { color: #3D3D3D; font-weight: 700; }
-.team-specialty { color: #A15B3A; margin-bottom: 20px; font-weight: 600; }
-.team-social { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; }
-.team-social a { color: #3D3D3D; font-size: 1rem; transition: all 0.3s ease; }
-.team-social a:hover { color: #A15B3A; transform: scale(1.2); }
-.btn-team-book {
-    display: inline-block;
-    background-color: #A15B3A;
-    color: #ffffff;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-}
-.btn-team-book:hover {
-    background-color: #A15B3A;
+.founder-section {
+    background-color: #F5F0E8; /* The warm, off-white background */
 }
     /* --- Footer Styles --- */
 /* ---
@@ -2527,60 +2491,76 @@ Styles for About Us Page (Earthy Theme)
 
 /* Updated Image Composition to match new theme */
 /* Philosophy Section Styling */
-.philosophy-section {
-    background-color: #F5F0E8; /* Corrected typo to F5F0E8 */
+/* NEW: Combined Philosophy & Commitment Section */
+.philosophy-commitment-section {
+    background-color: #F5F0E8;
 }
-.philosophy-section .lead {
+.philosophy-commitment-section h5 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #3D3D3D;
+    font-size: 1.3rem;
+}
+.philosophy-commitment-section .lead {
     font-size: 1.3rem;
     font-weight: 400;
     line-height: 1.8;
     color: #5D4037;
 }
-.philosophy-section p {
+/* This is the same style as the doctor bio list, now reused here */
+.approach-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+.approach-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
     font-size: 1.1rem;
-    line-height: 1.8;
+    color: #5D4037;
+}
+.approach-list i {
+    color: #A15B3A;
+    font-size: 1.2rem;
+    margin-top: 5px;
 }
 
-/* Pillars of Care Section Styling */
-.pillars-of-care {
-    background-color: #5D4037; /* Deep Earthy Brown */
-    padding-top: 80px;
-    padding-bottom: 80px;
+/* NEW: High-Contrast Core Values Section */
+.core-values-section {
+    position: relative;
+    padding: 80px 0;
+    background-color: #5D4037;
+    z-index: 1;
 }
-.pillar-card-alt {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 35px;
-    border-radius: 15px;
+/* We can add the mandala here for a beautiful, subtle touch */
+.core-values-section::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -250px; 
+    right: -300px;
+    width: 800px; 
+    height: 800px;
+    background-image: url('/images/mandala-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.05; /* Even more subtle on a dark background */
+    animation: slow-rotate 300s linear infinite;
+}
+.value-card {
+    padding: 30px;
     height: 100%;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
 }
-.pillar-card-alt:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-8px);
+.value-icon {
+    font-size: 3rem;
+    color: #DDB95A;
+    margin-bottom: 15px;
 }
-.pillar-card-alt h5 {
+.value-card h5 {
     color: #ffffff;
     font-family: 'Lora', serif;
-    margin-top: 15px;
-    font-size: 1.2rem;
-}
-.pillar-card-alt p {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-/* This is the missing icon style from the old pillar card */
-.pillar-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #A15B3A; /* Terracotta icon color */
-}
-/* We need a version for the dark background */
-.pillar-card-alt .pillar-icon {
-    color: #DDB95A; /* Gold icon color on dark background */
 }
 
 
@@ -2645,6 +2625,78 @@ Styles for About Us Page (Earthy Theme)
 .page-subtitle {
     font-size: 1.35rem;
     color: rgba(255, 255, 255, 0.85);
+}
+
+.map-container-alt {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #EBE4D9;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    height: 350px;
+}
+.map-container-alt iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---
+Styles for Doctor Bio Section on About Page
+--- */
+
+.doctor-bio-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 25px;
+}
+
+.doctor-bio-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #5D4037;
+}
+
+.doctor-bio-list i {
+    color: #A15B3A; /* Terracotta icon */
+    font-size: 1.2rem;
+    margin-top: 5px; /* Aligns icon with the text */
+}
+/* Commitment & Approach Section */
+
+/* Swastham Difference Section */
+.swastham-difference-section {
+    position: relative;
+    padding: 80px 0;
+    z-index: 1;
+    background-image: url('/images/swastham-difference-bg.jpg'); /* CHOOSE A BEAUTIFUL, CALM BG IMAGE */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.swastham-difference-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(93, 64, 55, 0.85); /* Dark brown with 85% opacity */
+    z-index: -1;
+}
+.swastham-difference-section .lead {
+    color: rgba(255,255,255,0.9);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ADD THIS NEW RULE */
+.value-card p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 /* end of about page */
 
@@ -2737,6 +2789,146 @@ This styles the artistic overlapping image container.
 /* Ensure the specialty clinic section subtitle is styled correctly */
 .pillars-of-care .section-subtitle {
     color: rgba(255, 255, 255, 0.7);
+}
+/* "Understanding Your Needs" List */
+.services-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 30px;
+    max-width: 800px;
+}
+.services-list li {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    color: #5D4037;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.services-list li i {
+    color: #A15B3A;
+}
+
+
+/* ---
+NEW: Beginner's Guide with Scroll Animation
+--- */
+
+.beginners-guide-section {
+    background-color: #F5F0E8; /* The warm, off-white background */
+}
+
+/* This makes the image column "sticky" on larger screens */
+.sticky-image-wrapper {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 120px; /* The distance from the top of the viewport when it "sticks" */
+}
+
+/* Right column that contains the steps */
+.guide-steps-wrapper {
+    padding-left: 3rem;
+}
+@media (max-width: 991.98px) {
+    .guide-steps-wrapper {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+}
+
+.guide-steps-wrapper .lead {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #5D4037;
+}
+
+/* The list and steps styling */
+.guide-steps-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 40px;
+}
+.guide-steps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px; /* More space between steps */
+}
+.step-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #A15B3A;
+    color: #ffffff;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(161, 91, 58, 0.2);
+}
+.step-content h5 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #3D3D3D;
+    margin-bottom: 5px;
+}
+.step-content p {
+    color: #5D4037;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+/* Styling for the "Spectrum of Care" & "Beyond Treatments" cards
+*/ 
+.pillars-of-care {
+    background-color: #5D4037; /* The dark brown background */
+}
+.pillars-of-care .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+}
+.pillar-card-alt {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 35px;
+    border-radius: 15px;
+    height: 100%;
+    text-align: left; /* Default to left align */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+.pillar-card-alt:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-8px);
+}
+.pillar-card-alt h5 {
+    color: #ffffff;
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+}
+.pillar-card-alt p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.pillar-card-alt .d-flex {
+    align-items: center;
+}
+.pillar-card-alt .pillar-icon {
+    color: #DDB95A;
+    font-size: 2rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.beyond-treatments-section {
+    background-color: #F5F0E8;
 }
 /* end of treatment page */
 
@@ -3150,6 +3342,89 @@ Styles for NEW Earthy Packages Page
 .modal-body .btn-primary-hero:hover {
     background-color: #5D4037;
 }
+
+/* ---
+Styles for NEW Treatment Modalities Section
+--- */
+
+.treatment-modalities-section {
+    /* We can reuse the .pillars-of-care dark background, so no new style is needed for the section itself */
+}
+
+/* The new, image-based card style */
+.modality-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns content to the bottom */
+    height: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: #ffffff;
+    
+    background-size: cover;
+    background-position: center;
+    
+    border: 2px solid transparent; /* Start with a transparent border */
+    transition: all 0.4s ease;
+}
+
+/* The dark gradient overlay for readability */
+.modality-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1) 60%, transparent);
+    z-index: 1;
+    transition: background 0.4s ease;
+}
+
+.modality-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* The descriptive paragraph that is hidden by default */
+.modality-desc {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0; /* Hidden by default */
+    max-height: 0; /* Collapsed by default */
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin-top: 10px;
+}
+
+/* The hover effects */
+.modality-card:hover {
+    border-color: #DDB95A; /* Gold border appears on hover */
+    transform: translateY(-8px);
+}
+.modality-card:hover::before {
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2) 60%, transparent);
+}
+.modality-card:hover .modality-desc {
+    opacity: 1; /* Fade in the description */
+    max-height: 100px; /* Expand to reveal */
+}
+
+/* Icon and Heading styles */
+.modality-card .pillar-icon {
+    font-size: 2.5rem;
+    color: #DDB95A;
+    margin-bottom: 10px;
+}
+.modality-card h5 {
+    font-family: 'Lora', serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0;
+}
+/* end of package page */
 /* ---
 Mandala Art Background Effect
 --- */
@@ -3186,6 +3461,7 @@ Mandala Art Background Effect
     animation: slow-rotate 300s linear infinite;
 }
 
+
 /* 3. Ensure the actual content of the section sits on top of the mandala */
 .mandala-background .container {
     position: relative;
@@ -3200,4 +3476,25 @@ Mandala Art Background Effect
     to {
         transform: rotate(360deg);
     }
+}
+.mandala-background::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: -250px; 
+    right: -300px; /* Default position is on the right */
+    width: 800px; 
+    height: 800px;
+    background-image: url('/images/mandala-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.5;
+    animation: slow-rotate 300s linear infinite;
+}
+
+/* ADD THIS NEW MODIFIER RULE */
+.mandala-background-flipped::before {
+    right: auto;      /* 1. Remove the right positioning */
+    left: -300px;     /* 2. Position it on the left instead */
+    transform-origin: center; /* Ensures rotation is smooth */
 }
